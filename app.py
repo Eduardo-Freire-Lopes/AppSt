@@ -22,16 +22,9 @@ st.markdown("""
 def excluir_linhas_do_df_maior(file1, file2, df_interseccao):
     # Ler os arquivos diretamente dentro da função
     df = pd.read_excel(file1)
-    df_empregados_sem_deb = pd.read_excel(file2)
-
-    # Obter o dataframe maior
-    if len(df) > len(df_empregados_sem_deb):
-        df_maior = df
-    else:
-        df_maior = df_empregados_sem_deb
 
     # Filtrar o df_maior removendo as linhas que estão no df_interseccao
-    df_maior_sem_interseccao = df_maior[~df_maior['Unnamed: 2'].isin(df_interseccao['PIS'])]
+    df_maior_sem_interseccao = df[~df['Unnamed: 2'].isin(df_interseccao['PIS'])]
 
     return df_maior_sem_interseccao
 
