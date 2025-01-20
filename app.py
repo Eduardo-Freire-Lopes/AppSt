@@ -58,6 +58,7 @@ colunas0, colunas1,colunas3, colunas2,colunas4 = st.columns([0.12,1.003,0.03,1,0
 
 with colunas1:
     uploaded_file_1 = st.file_uploader("Insira o arquivo Original", type=["xlsx"])
+    st.write(pd.read_excel(uploaded_file_1))
 
 with colunas2:
     uploaded_file_2 = st.file_uploader("Insira Arquivo Novo", type=["xlsx"])
