@@ -38,8 +38,8 @@ def excluir_linhas_do_df_maior(file1, file2, df_interseccao):
 
 def processar_arquivos(file1, file2):
 
-    df = pd.read_excel(file1).astype(str)
-    df_empregados_sem_deb = pd.read_excel(file2)
+    df = pd.read_excel(file1, dtype={'Unnamed: 1': str})  # Força a coluna 'Unnamed: 1' a ser lida como string
+    df_empregados_sem_deb = pd.read_excel(file2, dtype={'Unnamed: 1': str})
 
     df_interseccao = pd.merge(df, df_empregados_sem_deb, on='Unnamed: 1', how='inner')
 
@@ -58,7 +58,7 @@ colunas0, colunas1,colunas3, colunas2,colunas4 = st.columns([0.12,1.003,0.03,1,0
 
 with colunas1:
     uploaded_file_1 = st.file_uploader("Insira o arquivo Original", type=["xlsx"])
-    st.write(pd.read_excel(uploaded_file_1).astype(str))
+    # st.write(pd.read_excel(uploaded_file_1).astype(str))
 
 with colunas2:
     uploaded_file_2 = st.file_uploader("Insira Arquivo Novo", type=["xlsx"])
