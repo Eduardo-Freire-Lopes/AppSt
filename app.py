@@ -3,16 +3,15 @@ import pandas as pd
 
 st.set_page_config(page_title="Comparação Planilhas",layout="wide")
 
-# st.markdown('<title>Meu Aplicativo Streamlit</title>', unsafe_allow_html=True)
-st.markdown("""
-    <style>
-        .st-emotion-cache-1jicfl2 {
-            padding-left: 5rem;
-            padding-right: 5rem;
-            padding-top: 1.2rem;
-        }
-    </style>)
-""", unsafe_allow_html=True)
+# st.markdown("""
+#     <style>
+#         .st-emotion-cache-1jicfl2 {
+#             padding-left: 5rem;
+#             padding-right: 5rem;
+#             padding-top: 1.2rem;
+#         }
+#     </style>)
+# """, unsafe_allow_html=True)
 
 # st.markdown("""
 #     <div style="text-align: center;">
