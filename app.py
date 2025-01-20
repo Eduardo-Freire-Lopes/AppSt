@@ -13,11 +13,11 @@ st.set_page_config(page_title="Comparação Planilhas",layout="wide")
 #     </style>)
 # """, unsafe_allow_html=True)
 
-# st.markdown("""
-#     <div style="text-align: center;">
-#         <h1>Comparação de Planilhas</h1>
-#     </div>
-# """, unsafe_allow_html=True)
+st.markdown("""
+    <div style="text-align: center;">
+        <h1>Comparação de Planilhas</h1>
+    </div>
+""", unsafe_allow_html=True)
 
 def excluir_linhas_do_df_maior(file1, file2, df_interseccao):
     # Ler os arquivos diretamente dentro da função
